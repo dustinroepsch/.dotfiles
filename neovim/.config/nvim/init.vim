@@ -30,6 +30,9 @@ call plug#end()
 
 set background=dark
 colorscheme gruvbox
+" Set the font for NeoVide
+" https://github.com/Kethku/neovide
+set guifont=PragmataPro\ Mono\ Liga:h15
 
 
 " Everything after this line was copied from the CoC github page

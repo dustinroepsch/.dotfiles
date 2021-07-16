@@ -20,19 +20,22 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'gruvbox-community/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'lifepillar/vim-solarized8'
 Plug 'justinmk/vim-sneak'
+Plug 'sainnhe/gruvbox-material'
 
 call plug#end()
 
-set background=dark
-colorscheme gruvbox
+"fix background colors in kitty
+let &t_ut=' '
+
+" set background=dark
+colorscheme gruvbox-material
 " Set the font for NeoVide
 " https://github.com/Kethku/neovide
-set guifont=PragmataPro\ Mono\ Liga:h15
+set guifont=FiraCode\ Nerd\ Font\ Mono:h15
 
 
 " Everything after this line was copied from the CoC github page

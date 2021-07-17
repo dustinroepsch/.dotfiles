@@ -25,6 +25,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'lifepillar/vim-solarized8'
 Plug 'justinmk/vim-sneak'
 Plug 'sainnhe/gruvbox-material'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -35,7 +36,7 @@ let &t_ut=' '
 colorscheme gruvbox-material
 " Set the font for NeoVide
 " https://github.com/Kethku/neovide
-set guifont=FiraCode\ Nerd\ Font\ Mono:h13
+set guifont=PragmataProMonoLiga\ Nerd\ Font\ Mono:h15
 
 
 " Everything after this line was copied from the CoC github page

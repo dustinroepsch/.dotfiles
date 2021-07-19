@@ -36,7 +36,7 @@ let &t_ut=' '
 colorscheme gruvbox-material
 " Set the font for NeoVide
 " https://github.com/Kethku/neovide
-set guifont=PragmataProMonoLiga\ Nerd\ Font\ Mono:h15
+set guifont=PragmataProMonoLiga\ Nerd\ Font:h15
 
 
 " Everything after this line was copied from the CoC github page

@@ -29,8 +29,11 @@ Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
-"fix background colors in kitty
+" fix background colors in kitty
 let &t_ut=' '
+
+" enable powerline fonts
+let g:airline_powerline_fonts = 1
 
 " set background=dark
 colorscheme gruvbox-material

@@ -1,13 +1,3 @@
-" Insert spaces whenever tab key is pressed
-set tabstop=4 shiftwidth=4 expandtab
-
-set relativenumber
-set nowrap
-
-nnoremap <silent> <C-p> :GFiles<cr>
-nnoremap <C-t> :NERDTreeToggle<CR>
-noremap <C-m> :MinimapToggle<CR>
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-surround'
@@ -18,6 +8,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -29,8 +20,41 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'ryanoasis/vim-devicons'
 Plug 'karb94/neoscroll.nvim'
 Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
-
 call plug#end()
+
+" Insert spaces whenever tab key is pressed
+set tabstop=4 shiftwidth=4 expandtab
+
+" Show line numbers, relative to current position
+set relativenumber
+" Don't wrap text, let it go offscreen instead
+set nowrap
+
+
+" clear all bindings that space might already have, then map it as my leader
+" key
+nnoremap <SPACE> <Nop>
+let g:mapleader = " "
+
+
+" Search for files using fzf
+nnoremap <silent> <C-p> :GFiles<cr>
+nnoremap <silent> <Leader>p :Files<CR>
+
+" Open a file tree
+nnoremap <Leader>t :NERDTreeToggle<CR>
+" Open a sublime text esque minimap
+nnoremap <Leader>m :MinimapToggle<CR>
+
+" Switch to a centered focus mode
+let g:goyo_width = 130
+nnoremap <Leader>g :Goyo<CR>
+
+" Open this configuration files
+nnoremap <Leader>c :edit ~/.config/nvim/init.vim<CR>
+
+
+
 
 "enable smooth scrolling
 lua require('neoscroll').setup()
@@ -203,22 +227,3 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" Mappings for CoCList
-" Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
-" Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-

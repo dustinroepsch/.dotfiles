@@ -5,5 +5,6 @@ if status is-interactive
     switch (uname)
         case Darwin
             fish_add_path ~/.cargo/bin
+            fish_add_path /usr/local/opt/llvm/bin
     end
 end

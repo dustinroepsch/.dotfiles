@@ -21,6 +21,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'karb94/neoscroll.nvim'
 Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 Plug 'b4winckler/vim-objc'
+Plug 'cespare/vim-toml'
 call plug#end()
 
 " Insert spaces whenever tab key is pressed
@@ -54,8 +55,22 @@ nnoremap <Leader>g :Goyo<CR>
 " Open this configuration files
 nnoremap <Leader>c :edit ~/.config/nvim/init.vim<CR>
 
+"escape to exit terminal mode
+tnoremap <Esc> <C-\><C-n>
 
-
+" `ctrl+{h,j,k,l}` to navigate windows from any mode: >
+tnoremap <C-h> <C-\><C-N><C-w>h
+tnoremap <C-j> <C-\><C-N><C-w>j
+tnoremap <C-k> <C-\><C-N><C-w>k
+tnoremap <C-l> <C-\><C-N><C-w>l
+inoremap <C-h> <C-\><C-N><C-w>h
+inoremap <C-j> <C-\><C-N><C-w>j
+inoremap <C-k> <C-\><C-N><C-w>k
+inoremap <C-l> <C-\><C-N><C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 "enable smooth scrolling
 lua require('neoscroll').setup()
@@ -74,7 +89,7 @@ let g:minimap_auto_start_win_enter = 0
 colorscheme gruvbox-material
 " Set the font for NeoVide
 " https://github.com/Kethku/neovide
-set guifont=Iosevka\ Nerd\ Font:h15
+set guifont=PragmataProLiga\ Nerd\ Font:h13
 
 
 " Everything after this line was copied from the CoC github page

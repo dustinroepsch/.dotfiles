@@ -6,5 +6,6 @@ if status is-interactive
         case Darwin
             fish_add_path ~/.cargo/bin
             fish_add_path /usr/local/opt/llvm/bin
+            fish_add_path ~/dustbin
     end
 end

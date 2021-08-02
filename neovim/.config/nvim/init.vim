@@ -38,6 +38,10 @@ let g:mapleader = " "
 " Search for files using fzf
 nnoremap <silent> <C-p> :GFiles<cr>
 nnoremap <silent> <Leader>p :Files<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+
+" fix the escape key in fzf buffers (https://github.com/junegunn/fzf/issues/1393#issuecomment-426576577)
+autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
 
 " Open a file tree
 nnoremap <Leader>t :NERDTreeToggle<CR>

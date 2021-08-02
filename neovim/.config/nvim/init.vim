@@ -41,8 +41,6 @@ nnoremap <silent> <Leader>p :Files<CR>
 
 " Open a file tree
 nnoremap <Leader>t :NERDTreeToggle<CR>
-" Open a sublime text esque minimap
-nnoremap <Leader>m :MinimapToggle<CR>
 
 " Switch to a centered focus mode
 let g:goyo_width = 130
@@ -53,7 +51,7 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
 " Open this configuration files
-nnoremap <Leader>c :edit ~/.config/nvim/init.vim<CR>
+nnoremap <Leader>c :edit $MYVIMRC<CR>
 
 "escape to exit terminal mode
 tnoremap <Esc> <C-\><C-n>

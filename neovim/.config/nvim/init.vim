@@ -78,9 +78,6 @@ let &t_ut=' '
 
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
-let g:minimap_width = 20
-let g:minimap_auto_start = 0
-let g:minimap_auto_start_win_enter = 0
 
 
 " set background=dark

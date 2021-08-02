@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'b4winckler/vim-objc'
     Plug 'cespare/vim-toml'
     Plug 'dag/vim-fish'
+    Plug 'junegunn/limelight.vim'
 call plug#end()
 
 " Insert spaces whenever tab key is pressed
@@ -51,6 +52,10 @@ nnoremap <Leader>m :MinimapToggle<CR>
 " Switch to a centered focus mode
 let g:goyo_width = 130
 nnoremap <Leader>g :Goyo<CR>
+
+" Whenever goyo is entered, also enter limelight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 " Open this configuration files
 nnoremap <Leader>c :edit ~/.config/nvim/init.vim<CR>
@@ -242,7 +247,3 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}

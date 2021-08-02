@@ -1,28 +1,23 @@
 call plug#begin('~/.vim/plugged')
-    Plug 'tpope/vim-surround'
-    Plug 'tpope/vim-commentary'
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-abolish'
-    Plug 'dracula/vim', { 'as': 'dracula' }
-    Plug 'NLKNguyen/papercolor-theme'
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    Plug 'junegunn/goyo.vim'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'preservim/nerdtree'
-    " Plug 'sheerun/vim-polyglot'
-    Plug 'lifepillar/vim-solarized8'
-    Plug 'justinmk/vim-sneak'
-    Plug 'sainnhe/gruvbox-material'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'karb94/neoscroll.nvim'
-    Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
     Plug 'b4winckler/vim-objc'
     Plug 'cespare/vim-toml'
     Plug 'dag/vim-fish'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
+    Plug 'justinmk/vim-sneak'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'preservim/nerdtree'
+    Plug 'psliwka/vim-smoothie'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'sainnhe/gruvbox-material'
+    Plug 'tpope/vim-abolish'
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-surround'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " Insert spaces whenever tab key is pressed
@@ -78,7 +73,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "enable smooth scrolling
-lua require('neoscroll').setup()
+" lua require('neoscroll').setup()
 
 " fix background colors in kitty
 let &t_ut=' '

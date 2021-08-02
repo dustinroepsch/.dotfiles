@@ -60,6 +60,9 @@ nnoremap <Leader>c :edit $MYVIMRC<CR>
 "escape to exit terminal mode
 tnoremap <Esc> <C-\><C-n>
 
+"leader ; opens a terminal in a new window
+nnoremap <Leader>; :split<CR><C-w>j:resize 10<CR>:terminal<CR>
+
 " `ctrl+{h,j,k,l}` to navigate windows from any mode: >
 tnoremap <C-h> <C-\><C-N><C-w>h
 tnoremap <C-j> <C-\><C-N><C-w>j

@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 " Insert spaces whenever tab key is pressed
@@ -77,11 +78,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-"enable smooth scrolling
-" lua require('neoscroll').setup()
-
 " fix background colors in kitty
 let &t_ut=' '
+
 
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
@@ -89,6 +88,7 @@ let g:airline_powerline_fonts = 1
 
 " set background=dark
 colorscheme gruvbox-material
+let g:airline_theme = 'gruvbox_material'
 " Set the font for NeoVide
 " https://github.com/Kethku/neovide
 set guifont=PragmataProMonoLiga\ Nerd\ Font:h13

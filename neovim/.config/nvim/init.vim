@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'tomasiser/vim-code-dark'
+    Plug 'dbeniamine/cheat.sh-vim'
 call plug#end()
 
 " Insert spaces whenever tab key is pressed
@@ -27,7 +28,6 @@ set tabstop=4 shiftwidth=4 expandtab
 set relativenumber
 " Don't wrap text, let it go offscreen instead
 set nowrap
-
 
 " clear all bindings that space might already have, then map it as my leader
 " key
